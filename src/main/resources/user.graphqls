@@ -1,0 +1,19 @@
+type UserDto {
+    id: ID!,
+    firstName: String,
+    lastName: String,
+    userName: String,
+    email: String
+}
+
+type UserAuthDto {
+    authCode: Float
+}
+
+type Query {
+    users: [UserDto]
+}
+
+type Mutation {
+    authorize(userName: String, password: String) : UserAuthDto
+}
